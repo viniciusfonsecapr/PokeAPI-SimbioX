@@ -6,7 +6,7 @@ Projeto com a finalidade de consumir a api e demonstrar na tela uma lista de pok
 
 Link para acesso online:  https://pokedex-viniciusfonsecapr.netlify.app/
 ## Fotos do Projeto
-- Pagina Principal do Site.
+- Pagina Principal do Site. - Campo de Busca deve ser buscado apenas com letras minusculas.
 ![TelaPrincipalPokeDex](https://user-images.githubusercontent.com/87347314/180499734-3ea06f9a-1e17-4e88-a828-4b3cf232c5df.png) <br>
 
 - Favoritar Pokemon - Ao favoritar seu pokemon ficava salvo no localStorage e contado junta numeração de pokebolas no parte superior

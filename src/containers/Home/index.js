@@ -25,6 +25,7 @@ function Home() {
     try {
       setLoading(true);
       setNotFound(false);
+
       const data = await getPokemons(itensPerPage, itensPerPage * page);
       const promises = data.results.map(async (pokemon) => {
         return await getPokemonData(pokemon.url);
@@ -46,11 +47,12 @@ function Home() {
   };
 
   useEffect(() => {
-    loadFavoritePokemons();
+    loadFavoritePokemons()
   }, []);
 
   useEffect(() => {
-    fetchPokemons();
+    fetchPokemons()
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   const updateFavoritePokemons = (name) => {

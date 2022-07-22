@@ -1,3 +1,5 @@
+import axios from  'axios'
+
 export const searchPokemon = async (pokemon) => {
     try {
         let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
@@ -26,3 +28,7 @@ export const getPokemonData = async (url) => {
         console.log("error: ", error)
     }
 }
+
+export const apiPokeapi = axios.create({
+    baseURL: 'http://localhost:3003/'
+})

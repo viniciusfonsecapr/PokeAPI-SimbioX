@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { searchPokemon, getPokemonData, getPokemons } from '../../services/api'
+import { searchPokemon, getPokemonData, getPokemons, apiPokeapi} from '../../services/api'
 import { FavoriteProvider } from "../../contexts/favoriteContext";
 import { Container } from './styles'
 import Header from '../../components/Header'
@@ -19,7 +19,11 @@ function Home() {
   const [pokemons, setPokemons] = useState([]);
   const [favorites, setFavorites] = useState([]);
  
+ 
   const itensPerPage = 10;
+
+
+
 
   const fetchPokemons = async () => {
     try {

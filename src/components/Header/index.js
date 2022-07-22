@@ -9,10 +9,10 @@ function Header() {
       <Container>
           <img src={PokeImage}></img>
         <ContainerText>
-          <p>Home</p>
-          <p>About</p>
-          <p>API</p>
-          <p>Github</p>
+          <a href='/'>Home</a>
+          <a href='/'>About</a>
+          <a href='https://pokeapi.co/' target="_blank">POKEMON API</a>
+          <a href='https://github.com/viniciusfonsecapr/PokeAPI-SimbioX' target="_blank">Github</a>
         </ContainerText>
       </Container>
        

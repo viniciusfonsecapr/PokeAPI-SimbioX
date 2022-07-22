@@ -8,6 +8,7 @@ export const Container = styled.div`
   align-items: center;
   color: white;
   button {
+    cursor: pointer;
     background-color: #0e6f9f;
     border: none;
     border-radius: 25px;

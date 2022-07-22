@@ -1,61 +1,80 @@
 import React, { useEffect, useState } from 'react'
-import api from '../../services/api'
-import IconSearch from '../../assets/icons8-pesquisar.svg'
+import { searchPokemon, getPokemonData, getPokemons } from '../../services/api'
 
-import { Container, ContainerInputSearch } from './styles'
+
+import { Container } from './styles'
 import Header from '../../components/Header'
-import Card from '../../components/Card';
-import PokeInfo from '../../components/PokeInfo';
+import Pokedex from '../../components/Pokedex';
+import Searchbar from "../../components/Input";
 
 function Home() {
 
-  const [pokemons, setPokemons] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [url, setUrl] = useState(api)
-  const [pokeDex, setPokeDex] = useState()
+  const [page, setPage] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [notFound, setNotFound] = useState(false);
+  const [pokemons, setPokemons] = useState([]);
+ 
+  const itensPerPage = 24;
 
+  const fetchPokemons = async () => {
+    try {
+      setLoading(true);
+      setNotFound(false);
+      const data = await getPokemons(itensPerPage, itensPerPage * page);
+      const promises = data.results.map(async (pokemon) => {
+        return await getPokemonData(pokemon.url);
+      });
 
-  const pokeFun = async () => {
-    setLoading(true)
-    const res = await api.get('/')
-    getPokemon(res.data.results)
-    setLoading(false)
-    // console.log(pokemons)
-
-  }
-  const getPokemon = async (res) => {
-    res.map(async (item) => {
-      const result = await api.get(item.url)
-      // console.log(result.data)
-      setPokemons(state => {
-        state = [...state, result.data]
-        state.sort((a,b) => a.id>b.id?1:-1)
-        return state;
-      })
-    })
-  }
+      const results = await Promise.all(promises);
+      setPokemons(results);
+      setLoading(false);
+      setTotalPages(Math.ceil(data.count / itensPerPage));
+    } catch (error) {
+      console.log("fetchPokemons error:", error);
+    }
+  };
 
   useEffect(() => {
-    pokeFun()
-  }, [url])
+    fetchPokemons();
+  }, [page]);
+
+
+  const onSearchHandler = async (pokemon) => {
+    if (!pokemon) {
+      return fetchPokemons();
+    }
+
+    setLoading(true);
+    setNotFound(false);
+    const result = await searchPokemon(pokemon);
+    if (!result) {
+      setNotFound(true);
+    } else {
+      setPokemons([result]);
+      setPage(0);
+      setTotalPages(1);
+    }
+    setLoading(false);
+  };
 
   return (
-    <>
+    <div>
       <Container>
         <Header></Header>
-        <ContainerInputSearch>
-          <img src={IconSearch} width={30} height={30}></img>
-          <input type="text" ></input>
-        </ContainerInputSearch>
-        <div className='left-content'>
-          <Card pokemon={pokemons} loading={loading} infoPokemon={poke=>setPokeDex(poke)} ></Card>
-        </div>
-        <div className='right-content'>
-            <PokeInfo data={pokeDex}></PokeInfo>
-        </div>
-
+        <Searchbar onSearch={onSearchHandler} />
+        {notFound ? (
+          <h1>Não achamos esse Pokemon :\</h1>
+        ) : (
+            <Pokedex 
+            pokemons={pokemons}
+            loading={loading}
+            page={page}
+            setPage={setPage}
+            totalPages={totalPages}></Pokedex>
+        )}
       </Container>
-    </>
+    </div>
   );
 }
 

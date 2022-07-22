@@ -4,12 +4,12 @@ export const Container = styled.div`
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
-  
   flex:1;
   border-radius: 10px;
   background-color: #87cefa;
+
   button {
     flex-direction: column;
     margin: 10px;
@@ -17,9 +17,10 @@ export const Container = styled.div`
     padding: 5px 5px;
     border: none;
     border-radius: 10px;
-    color: var(--white);
+    color: white;
     cursor: pointer;
   }
+
   div.image-pokemon {
     width: 70px;
     height: 70px;
@@ -41,7 +42,7 @@ export const Container = styled.div`
     padding: 5px 5px;
     border: none;
     border-radius: 10px;
-    color: var(--white);
+    color: white;
     cursor: pointer;
     text-transform: capitalize;
   }

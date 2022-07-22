@@ -14,40 +14,51 @@ background-size: cover;
 }
 
 .right-content {
-    width: 50%;
+    background-color: #D30A40;
+    border-radius: 20px 5px;
+    width: 320px;
     text-align: center;
     color: black;
     position: fixed;
-    top: 130px;
-    right: 4px;
+    top: 135px;
+    right: 110px;
 }
 .right-content img{
-    margin: 2rem;
-    height: 170px;
+    margin: 1px 20px 0px 20px;
+    height: 175px;
 }
 .right-content h1{
+    margin-top: 10px;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
 }
 .abilities {
-    width: 30%;
-    margin: auto;
+    text-transform: capitalize;
+    width: 80%;
     display: flex;
-    justify-content: space-around;
+    margin: 0 auto;
+    justify-content: center;
     align-items: center;
-    margin-top: 5px;
+    margin-bottom: 10px;
     
 }
 .abilities .group {
+    text-transform: capitalize;
     background-color: #b74555;
     color: white;
-    padding: 0.5rem;
+    padding: 10px;
     font-size:12px;
-    border-radius: 10px;
+    border-radius: 6px;
+}
+.abilities .group {
+    
 }
 .base-stat {
+    color: white;
+    text-transform: capitalize;
    margin-top: 10px;
+   margin-bottom: 20px;
 }
 
 `
@@ -55,16 +66,24 @@ background-size: cover;
 export const ContainerInputSearch = styled.div ` 
 display: flex;
 flex-direction: row;
-justify-content: space-evenly;
-width: 98.7vw;
+width: 100%;
 height: 40px;
 background-color: #1488FA;
 
+img {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
 input {
     margin-top: 5px;
+    margin-left: 30px;
+    outline: none;
+    padding-left: 50px;
     border-radius: 8px;
     border: none;
-    width: 300px;
+    width: 600px;
     height: 30px;
 }
 

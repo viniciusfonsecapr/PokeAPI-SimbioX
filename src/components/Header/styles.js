@@ -1,22 +1,24 @@
 import styled from 'styled-components'
 
 export const Container = styled.div `
+width: 100%;
 height: 72px;
 background-color:#1449FA ;
 display: flex;
 align-items: center;
-justify-content: center;
+justify-content: left;
 
 
 img {
-    height: 70px;
+    margin-left: 20px;
+    height: 65px;
 }
 `
 
 export const ContainerText = styled.div ` 
 color: black;
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
 flex-direction: row;
 gap:80px;
 text-decoration: none;

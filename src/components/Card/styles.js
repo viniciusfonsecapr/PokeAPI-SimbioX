@@ -37,18 +37,20 @@ h4{
 }
 
 button {
+    text-transform: capitalize;
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 10px;
+    padding-top: 6px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     margin-top: 50px;
-    margin-left: 40px;
-    width: 200px;
+    margin-left: 60px;
+    width: 160px;
     height: 40px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
 }
 `

@@ -1,6 +1,4 @@
 import React from "react";
-import Pokemon from '../../assets/pokemon.svg'
-
 import { Container } from './styles'
 
 const PokeInfo = ({ data }) => {
@@ -19,6 +17,7 @@ const PokeInfo = ({ data }) => {
                                         return (
                                             <>
                                                 <div className="group">
+                                                    <p>Habilidade</p>
                                                     <h2>{poke.ability.name}</h2>
                                                 </div>
                                             </>

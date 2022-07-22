@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import api from '../../services/api'
-
+import IconSearch from '../../assets/icons8-pesquisar.svg'
 
 import { Container, ContainerInputSearch } from './styles'
 import Header from '../../components/Header'
@@ -44,6 +44,7 @@ function Home() {
       <Container>
         <Header></Header>
         <ContainerInputSearch>
+          <img src={IconSearch} width={30} height={30}></img>
           <input type="text" ></input>
         </ContainerInputSearch>
         <div className='left-content'>

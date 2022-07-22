@@ -18,7 +18,7 @@ function Card({ pokemon, loading, infoPokemon}) {
                     <h3>{item.name}</h3>
                     <h4>Peso: {item.weight} kg</h4>
                     <h4>Altura: {item.height} metros</h4>
-                    <button onClick={()=> infoPokemon(item)}>Sobre</button>
+                    <button onClick={()=> infoPokemon(item)}>Informoções sobre o pokemon</button>
                   </ContainerItems>
                 </Container>
               </>

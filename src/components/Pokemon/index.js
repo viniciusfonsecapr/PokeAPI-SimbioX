@@ -2,12 +2,15 @@ import React, {useContext} from "react";
 import FavoriteContext from "../../contexts/favoriteContext";
 import { Container } from "./styles";
 
+
 export default function Pokemon(props) {
     const { favoritePokemons, updateFavoritePokemons } = useContext(FavoriteContext)
     const { pokemon } = props
     const onHeartClick = () => {
         updateFavoritePokemons(pokemon.name)
       };
+
+
       const heart = favoritePokemons.includes(pokemon.name) ? "❤️" : "💙";
     return (
         <Container>
@@ -24,8 +27,8 @@ export default function Pokemon(props) {
             <div className="card-bottom">
                 {pokemon.types.map((type, index) => {
                     return (
+                        
                         <div key={index} className="pokemon-type-text">
-                            {" "}
                             {type.type.name}
                         </div>
                     );

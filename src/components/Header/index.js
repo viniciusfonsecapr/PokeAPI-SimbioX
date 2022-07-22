@@ -11,7 +11,7 @@ function Header() {
         <ContainerText>
           <a href='/' rel="noreferrer">Home</a>
           <a href='/' rel="noreferrer">About</a>
-          <a href='https://pokeapi.co/' target="_blank" rel="noreferrer">POKEMON API</a>
+          <a href='https://pokeapi.co/' target="_blank" rel="noreferrer">POKE API</a>
           <a href='https://github.com/viniciusfonsecapr/PokeAPI-SimbioX' target="_blank" rel="noreferrer">Github</a>
         </ContainerText>
       </Container>

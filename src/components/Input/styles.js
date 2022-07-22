@@ -20,15 +20,28 @@ export const Container = styled.div`
   border-radius: 10px;
   background-color: white;
   cursor: pointer;
+  width: 400px;
+
+  @media (max-width: 900px) {
+     width: 200px;
+
+    }
 }
+
 button {
+  display: flex;
   background-color: #0e6f9f;
   border: none;
   border-radius:10px;
   height: 40px;
   color: white;
   padding: 10px 12px;
-  margin-left:12px;
+  margin-left:50px;
   cursor: pointer;
+
+  @media (max-width: 900px) {
+      width: 70px;
+      margin-left: 20px;
+    }
 }
 `

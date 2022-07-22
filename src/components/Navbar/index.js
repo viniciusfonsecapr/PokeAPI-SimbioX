@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <Container>
       
-      <div>❤️ / {favoritePokemons.length}</div>
+      <div> <img src="https://cdn-icons-png.flaticon.com/512/188/188918.png" width={15} height={15} alt="pokebola"></img>  / {favoritePokemons.length}</div>
     </Container>
   );
 }

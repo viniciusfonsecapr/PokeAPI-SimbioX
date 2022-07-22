@@ -7,12 +7,12 @@ function Header() {
   return (
     <>
       <Container>
-          <img src={PokeImage}></img>
+          <img src={PokeImage} alt="Pokeapi"></img>
         <ContainerText>
-          <a href='/'>Home</a>
-          <a href='/'>About</a>
-          <a href='https://pokeapi.co/' target="_blank">POKEMON API</a>
-          <a href='https://github.com/viniciusfonsecapr/PokeAPI-SimbioX' target="_blank">Github</a>
+          <a href='/' rel="noreferrer">Home</a>
+          <a href='/' rel="noreferrer">About</a>
+          <a href='https://pokeapi.co/' target="_blank" rel="noreferrer">POKEMON API</a>
+          <a href='https://github.com/viniciusfonsecapr/PokeAPI-SimbioX' target="_blank" rel="noreferrer">Github</a>
         </ContainerText>
       </Container>
        

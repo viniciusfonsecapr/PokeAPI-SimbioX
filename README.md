@@ -1,22 +1,22 @@
 
-# PokeAPI - SimbioX
+# PokeAPI - SimbioX :computer:
 
 Projeto com a finalidade de consumir a api e demonstrar na tela uma lista de pokemons com informações como id, nome, tipo, peso e altura.
 
 
-Link para acesso online:  https://pokedex-viniciusfonsecapr.netlify.app/
-## Fotos do Projeto
+:man_technologist: Link para acesso online:  https://pokedex-viniciusfonsecapr.netlify.app/
+## Fotos do Projeto :framed_picture:
 - Pagina Principal do Site. - Campo de Busca deve ser buscado apenas com letras minusculas.
 ![TelaPrincipalPokeDex](https://user-images.githubusercontent.com/87347314/180499734-3ea06f9a-1e17-4e88-a828-4b3cf232c5df.png) <br>
 
-- Favoritar Pokemon - Ao favoritar seu pokemon ficava salvo no localStorage e contado junta numeração de pokebolas no parte superior
+:heart: - Favoritar Pokemon - Ao favoritar seu pokemon ficava salvo no localStorage e contado junta numeração de pokebolas no parte superior
 ![FavoritarPokemon](https://user-images.githubusercontent.com/87347314/180500162-0cbc9386-b2a3-4f2e-ad0a-93bb625e5eda.png) <br>
 
-- Versão Mobile do Site <br>
+:iphone: - Versão Mobile do Site <br>
 ![Tela Mobile](https://user-images.githubusercontent.com/87347314/180500596-ff1f8005-323c-4a18-b3a6-cd965f781dd9.png)
 
 
-## Passo 1  - Instalação Geral 
+## Passo 1  - Instalação Geral  :card_index_dividers:
 
 Baixe o projeto em Code -> Download zip 
 
@@ -27,7 +27,7 @@ Após isso os arquivos do projeto  já estárão disponiveis.
 Siga o passo a passo abaixo para instalação do backend e front end.
 
 
-## Instalação do Backend
+## Instalação do Backend :card_index_dividers:
 
 Acesse o arquivo BackendAPi.zip que está na pasta raiz junto com os arquivos ex.:package.json.
 
@@ -48,7 +48,7 @@ Na aplicação normal está sendo usada as rotas diretas RESTful da API, fazendo
   yarn dev
 ```
 
-## Instalação do Front End 
+## Instalação do Front End  :card_index_dividers:
 Após descompactar os arquivos já vão estar disponiveis para uso. ( Passo 1 - Instalaçaõ Geral)
 
 Após instalar o arquivos......
